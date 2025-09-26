@@ -1,0 +1,10 @@
+{
+  "name": "SQLite Database Server",
+  "description": "MCP server for SQLite database access",
+  "transport": {
+    "type": "stdio",
+    "command": "node",
+    "args": ["dist/index.js"],
+    "cwd": "/Users/osheen/Desktop/MSBA/Personal projects/CodeAIHackathon/hack-with-ai/my-agent-directory/mcp-server"
+  }
+}
