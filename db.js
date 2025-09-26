@@ -3,15 +3,12 @@ import Database from "better-sqlite3";
 const db = new Database("demo.db");
 
 function ensureUsersTable() {
-	// Check if the users table exists
 	const tbl = db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name='users'").all();
 	if (tbl.length === 0) {
-		// Fresh create with desired constraints
 		db.exec("CREATE TABLE users (id INTEGER PRIMARY KEY, name TEXT NOT NULL)");
 		return;
 	}
 
-	// Inspect existing table schema
 	const info = db.prepare("PRAGMA table_info('users')").all();
 	const idCol = info.find((c) => c.name === 'id');
 	const nameCol = info.find((c) => c.name === 'name');
