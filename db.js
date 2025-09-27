@@ -6,3 +6,4 @@ db.exec("INSERT OR IGNORE INTO users (id, name) VALUES (1, 'Alice'), (2, 'Bob')"
 
 const rows = db.prepare("SELECT * FROM users").all();
 console.log(rows);
+

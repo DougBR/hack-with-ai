@@ -12,7 +12,7 @@ import Database from "better-sqlite3";
 import { z } from "zod";
 
 // Database setup with enhanced initialization
-const db = new Database("../../demo.db");
+const db = new Database("demo.db");
 const etfDb = new Database("etf_data.db");
 
 // Enhanced database initialization function
